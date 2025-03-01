@@ -26,14 +26,18 @@ export class EditarRestauranteComponent {
     this.form = this.fb.group({
       nombre: ['', [Validators.required]],
       direccion: ['', [Validators.required]],
-      fundacion: ['', [Validators.required]]
+      fundacion: ['', [Validators.required]],
+      latitud: ['', [Validators.required]],
+      longitud: ['', [Validators.required]]
     });
 
     this.restauranteService.getRestaurante(this.restauranteId!).subscribe(restauranteEditar => {
       this.form.patchValue({
         nombre: restauranteEditar.nombre,
         direccion: restauranteEditar.direccion,
-        fundacion: restauranteEditar.fundacion
+        fundacion: restauranteEditar.fundacion,
+        latitud: restauranteEditar.latitud,
+        longitud: restauranteEditar.longitud
       });
     });
   }
@@ -44,7 +48,9 @@ export class EditarRestauranteComponent {
         id: this.restauranteId,
         nombre: this.form.value.nombre,
         direccion: this.form.value.direccion,
-        fundacion: this.form.value.fundacion
+        fundacion: this.form.value.fundacion,
+        latitud: this.form.value.latitud,
+        longitud: this.form.value.longitud
       }
 
       this.restauranteService.updateRestaurante(nuevoRestaurante).subscribe(() => this.form.reset());

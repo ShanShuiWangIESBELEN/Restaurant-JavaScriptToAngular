@@ -10,6 +10,7 @@
                 <th>Nombre</th>
                 <th>Dirección</th>
                 <th>Fecha Fundación</th>
+                <th>Mapa</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -19,6 +20,9 @@
                 <td>{{restaurante.nombre}}</td>
                 <td>{{restaurante.direccion}}</td>
                 <td>{{restaurante.fundacion}}</td>
+                <td>
+                    <a class="btn btn-info btn-sm" [routerLink]="['/mapa', restaurante.id]">Ver Mapa</a>
+                </td>
                 <td>
                     <a class="btn btn-danger btn-sm me-2" (click)="eliminarRestaurante(restaurante.id)">Eliminar</a>
                     <a class="btn btn-info btn-sm" [routerLink]="['/editarestaurante', restaurante.id]">Editar</a>

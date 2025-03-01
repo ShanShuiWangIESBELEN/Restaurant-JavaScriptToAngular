@@ -6,9 +6,10 @@ import { EditarRestauranteComponent } from './components/restaurante/editar-rest
 import { ListarPlatosComponent } from './components/plato/listar-platos/listar-platos.component';
 import { CrearPlatoComponent } from './components/plato/crear-plato/crear-plato.component';
 import { EditarPlatoComponent } from './components/plato/editar-plato/editar-plato.component';
-
+import { MapaComponent } from './components/mapa/mapa.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
+    { path: 'mapa/:id', component: MapaComponent },
     { path: 'listarestaurantes', component: ListarRestaurantesComponent },
     { path: 'crearestaurante', component: CrearRestauranteComponent },
     { path: 'editarestaurante/:id', component: EditarRestauranteComponent },

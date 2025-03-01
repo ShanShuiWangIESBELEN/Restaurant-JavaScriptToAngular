@@ -4,37 +4,49 @@
       "id": "1",
       "nombre": "El Rincón Mexicano",
       "direccion": "Calle Falsa 123",
-      "fundacion": "2000-01-01"
+      "fundacion": "2000-01-01",
+      "latitud": 19.432608,
+      "longitud": -99.133209
     },
     {
       "id": "2",
       "nombre": "La Casa del Curry",
       "direccion": "Avenida Siempre Viva 742",
-      "fundacion": "2005-05-05"
+      "fundacion": "2005-05-05",
+      "latitud": 28.613939,
+      "longitud": 77.209023
     },
     {
       "id": "3",
       "nombre": "La Trattoria Italiana",
       "direccion": "Via Roma 456, Roma, Italia",
-      "fundacion": "1998-03-15"
+      "fundacion": "1998-03-15",
+      "latitud": 41.902783,
+      "longitud": 12.496366
     },
     {
       "id": "4",
       "nombre": "Sakura Sushi",
       "direccion": "Shibuya 789, Tokio, Japón",
-      "fundacion": "2010-07-21"
+      "fundacion": "2010-07-21",
+      "latitud": 35.689487,
+      "longitud": 139.691711
     },
     {
       "id": "5",
       "nombre": "Le Gourmet Français",
       "direccion": "Rue de Rivoli 101, París, Francia",
-      "fundacion": "2003-11-30"
+      "fundacion": "2003-11-30",
+      "latitud": 48.856613,
+      "longitud": 2.352222
     },
     {
       "id": "6",
       "nombre": "El Asador Argentino",
       "direccion": "Avenida Corrientes 1234, Buenos Aires, Argentina",
-      "fundacion": "2001-09-10"
+      "fundacion": "2001-09-10",
+      "latitud": -34.603722,
+      "longitud": -58.381592
     }
   ]
 }

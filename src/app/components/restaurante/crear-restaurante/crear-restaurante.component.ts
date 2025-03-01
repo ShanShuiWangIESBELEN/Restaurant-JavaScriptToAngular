@@ -32,7 +32,9 @@ export class CrearRestauranteComponent {
         id: (this.restaurantes.length > 0 ? (Number(this.restaurantes[this.restaurantes.length - 1].id) + 1).toString() : '1'),
         nombre: this.form.value.nombre,
         direccion: this.form.value.direccion,
-        fundacion: this.form.value.fundacion
+        fundacion: this.form.value.fundacion,
+        latitud: 0,
+        longitud: 0
       }
 
       this.restauranteService.addRestaurante(nuevoRestaurante).subscribe(() => this.form.reset());
