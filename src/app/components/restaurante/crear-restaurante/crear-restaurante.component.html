@@ -1,0 +1,21 @@
+<div class="container my-5">
+    <h1 class="text-center">Nuevo Restaurante</h1>
+    <form [formGroup]="form" (submit)="submit()" id="formRestaurante">
+        <div class="mb-3">
+            <label for="nombreRestaurante" class="form-label">Nombre</label>
+            <input formControlName="nombre" type="text" class="form-control" id="nombreRestaurante" required>
+        </div>
+        <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input formControlName="direccion" type="text" class="form-control" id="direccion" required>
+        </div>
+        <div class="mb-3">
+            <label for="fundacionRestaurante" class="form-label">Fundación</label>
+            <input formControlName="fundacion" type="date" class="form-control" id="fundacionRestaurante" required>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success me-2">Guardar</button>
+            <a [routerLink]="['/listarestaurantes']" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>

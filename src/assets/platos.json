@@ -1,0 +1,39 @@
+{
+  "platos": [
+    {
+      "id": "2",
+      "nombre": "Paella",
+      "tipo": "Principal",
+      "restauranteId": "2",
+      "fechaCreacion": "2021-01-01"
+    },
+    {
+      "id": "3",
+      "nombre": "Gazpacho",
+      "tipo": "Entrada",
+      "restauranteId": "1",
+      "fechaCreacion": "2021-02-15"
+    },
+    {
+      "id": "4",
+      "nombre": "Tarta de Santiago",
+      "tipo": "Postre",
+      "restauranteId": "3",
+      "fechaCreacion": "2021-03-10"
+    },
+    {
+      "id": "5",
+      "nombre": "Cocido Madrileño",
+      "tipo": "Principal",
+      "restauranteId": "2",
+      "fechaCreacion": "2021-04-05"
+    },
+    {
+      "id": "6",
+      "nombre": "Tortilla Española",
+      "tipo": "Entrada",
+      "restauranteId": "1",
+      "fechaCreacion": "2021-05-20"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <h1 class="text-center">Nuevo Plato</h1>
+    <form [formGroup]="form" (submit)="submit()" id="formPlato">
+        <div class="mb-3">
+            <label for="nombrePlato" class="form-label">Nombre</label>
+            <input formControlName="nombre" type="text" class="form-control" id="nombrePlato" required>
+        </div>
+        <div class="mb-3">
+            <label for="tipoPlato" class="form-label">Tipo</label>
+            <input formControlName="tipo" type="text" class="form-control" id="tipoPlato" required>
+        </div>
+        <div class="mb-3">
+            <label for="restaurantePlato" class="form-label">Restaurante</label>
+            <select formControlName="restaurante" class="form-select" id="restaurantePlato">
+                <option *ngFor="let restaurante of restaurantes; trackBy: trackById" [value]="restaurante.id">
+                    {{restaurante.nombre}}
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input formControlName="fecha" type="date" class="form-control" id="fechaCreacionPlato" required>
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <a [routerLink]="['/listarplatos']" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

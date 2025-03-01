@@ -1,0 +1,40 @@
+{
+  "restaurantes": [
+    {
+      "id": "1",
+      "nombre": "El Rincón Mexicano",
+      "direccion": "Calle Falsa 123",
+      "fundacion": "2000-01-01"
+    },
+    {
+      "id": "2",
+      "nombre": "La Casa del Curry",
+      "direccion": "Avenida Siempre Viva 742",
+      "fundacion": "2005-05-05"
+    },
+    {
+      "id": "3",
+      "nombre": "La Trattoria Italiana",
+      "direccion": "Via Roma 456, Roma, Italia",
+      "fundacion": "1998-03-15"
+    },
+    {
+      "id": "4",
+      "nombre": "Sakura Sushi",
+      "direccion": "Shibuya 789, Tokio, Japón",
+      "fundacion": "2010-07-21"
+    },
+    {
+      "id": "5",
+      "nombre": "Le Gourmet Français",
+      "direccion": "Rue de Rivoli 101, París, Francia",
+      "fundacion": "2003-11-30"
+    },
+    {
+      "id": "6",
+      "nombre": "El Asador Argentino",
+      "direccion": "Avenida Corrientes 1234, Buenos Aires, Argentina",
+      "fundacion": "2001-09-10"
+    }
+  ]
+}

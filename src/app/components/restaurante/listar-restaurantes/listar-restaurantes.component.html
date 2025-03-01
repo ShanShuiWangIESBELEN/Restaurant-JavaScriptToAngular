@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <h1 class="text-center">Restaurantes</h1>
+    <div class="text-center mb-3">
+        <a [routerLink]="['/crearestaurante']" class="btn btn-primary">Añadir Nuevo Restaurante</a>
+    </div>
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Fecha Fundación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let restaurante of restaurantes; trackBy: trackById">
+                <td>{{restaurante.id}}</td>
+                <td>{{restaurante.nombre}}</td>
+                <td>{{restaurante.direccion}}</td>
+                <td>{{restaurante.fundacion}}</td>
+                <td>
+                    <a class="btn btn-danger btn-sm me-2" (click)="eliminarRestaurante(restaurante.id)">Eliminar</a>
+                    <a class="btn btn-info btn-sm" [routerLink]="['/editarestaurante', restaurante.id]">Editar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
