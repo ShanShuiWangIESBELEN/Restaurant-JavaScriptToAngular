@@ -3,35 +3,25 @@
     <div class="text-center mb-3">
         <a [routerLink]="['/crearplato']" class="btn btn-primary">Añadir Nuevo Plato</a>
     </div>
-    <table class="table table-striped table-hover">
-        <thead class="thead-dark">
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Restaurante</th>
-                <th>Fecha de Creación</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let plato of platos; trackBy: trackById">
-                <td>{{plato.id}}</td>
-                <td>{{plato.nombre}}</td>
-                <td>{{plato.tipo}}</td>
-                <td>
-                    <ng-container *ngFor="let restaurante of restaurantes; trackBy: trackById">
-                        <ng-container *ngIf="restaurante.id === plato.restauranteId">
-                            {{restaurante.nombre}}
+    <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let plato of platos; trackBy: trackById">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{plato.nombre}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{plato.tipo}}</h6>
+                    <p class="card-text">
+                        Restaurante:
+                        <ng-container *ngFor="let restaurante of restaurantes; trackBy: trackById">
+                            <ng-container *ngIf="restaurante.id === plato.restauranteId">
+                                {{restaurante.nombre}}
+                            </ng-container>
                         </ng-container>
-                    </ng-container>
-                </td>
-                <td>{{plato.fechaCreacion}}</td>
-                <td>
+                    </p>
+                    <p class="card-text">Fecha de Creación: {{plato.fechaCreacion}}</p>
                     <a class="btn btn-info btn-sm" [routerLink]="['/editarplato', plato.id]">Editar</a>
                     <a class="btn btn-danger btn-sm me-2" (click)="eliminarPlato(plato.id)">Eliminar</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

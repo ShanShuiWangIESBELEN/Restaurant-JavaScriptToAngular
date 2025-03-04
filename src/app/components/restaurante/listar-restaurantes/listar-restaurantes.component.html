@@ -3,31 +3,18 @@
     <div class="text-center mb-3">
         <a [routerLink]="['/crearestaurante']" class="btn btn-primary">Añadir Nuevo Restaurante</a>
     </div>
-    <table class="table table-striped table-hover">
-        <thead class="thead-dark">
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Dirección</th>
-                <th>Fecha Fundación</th>
-                <th>Mapa</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let restaurante of restaurantes; trackBy: trackById">
-                <td>{{restaurante.id}}</td>
-                <td>{{restaurante.nombre}}</td>
-                <td>{{restaurante.direccion}}</td>
-                <td>{{restaurante.fundacion}}</td>
-                <td>
+    <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let restaurante of restaurantes; trackBy: trackById">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{restaurante.nombre}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{restaurante.direccion}}</h6>
+                    <p class="card-text">Fecha de Fundación: {{restaurante.fundacion}}</p>
                     <a class="btn btn-info btn-sm" [routerLink]="['/mapa', restaurante.id]">Ver Mapa</a>
-                </td>
-                <td>
                     <a class="btn btn-info btn-sm" [routerLink]="['/editarestaurante', restaurante.id]">Editar</a>
                     <a class="btn btn-danger btn-sm me-2" (click)="eliminarRestaurante(restaurante.id)">Eliminar</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
